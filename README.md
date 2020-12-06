@@ -24,4 +24,4 @@ What you'll need:
 3. Run command `npm start` to run all the tests.
 
 ### Cucumber
-1. Open the [Cucumber](/Cucumber) in your IDE or cmd prompt and run `mvn test` in it's root folder.
+1. Open the [Cucumber](/Cucumber) project in your IDE or cmd prompt and run `mvn test` in it's root folder.
