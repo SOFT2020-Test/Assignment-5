@@ -15,7 +15,7 @@ What you'll need:
 ## How to run the projects
 ### Selenium (Browser)
 1. Download the Selenium browser extension and open the program.
-2. Import [SeleniumBrowserProject.side](/Selenium/SeleniumBrowserProject.side) into selenium
+2. Import [SeleniumBrowserProject.side](/Selenium) into selenium
 3. Click "Run All Tests" (CTRL+SHIFT+R)
 
 ### Selenium (Webdriver)
