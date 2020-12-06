@@ -9,7 +9,7 @@ What you'll need:
 1. Docker to set up a virtual mysql database.
 2. MySQL Workbench or any mysql client.
 3. Your favorite IDE that can run java, we use IntelliJ.
-4. Your favorite IDE that can run node, we use VS Code.
+4. Your favorite streamline code editor  that can run node, we use VS Code.
 5. Selenium IDE for chrome [Download Here](https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd?hl=en)
 
 ## How to run the projects
