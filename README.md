@@ -1,5 +1,6 @@
 # Assignment-3   
-###   by Jonatan, Jonas & Thomas  
+- Jonas Hein - https://github.com/Zenzus
+- Thomas Ebsen - https://github.com/Srax
 [Assignment Link](/Assignment-3-Description.pdf)  
 
 ## Setup
