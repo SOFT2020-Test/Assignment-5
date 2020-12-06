@@ -1,7 +1,7 @@
 # Assignment-5
 - Jonas Hein - https://github.com/Zenzus
-- Thomas Ebsen - https://github.com/Srax
-[Assignment Link](/Assignment-3-Description.pdf)  
+- Thomas Ebsen - https://github.com/Srax  
+[Assignment Link](assignment-05.pdf)  
 
 ## Setup
 What you'll need:
