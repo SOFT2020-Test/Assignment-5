@@ -15,11 +15,11 @@ What you'll need:
 ## How to run the projects
 ### Selenium (Browser)
 1. Download the Selenium browser extension and open the program.
-2. Import [SeleniumBrowserProject.side](/selenium/SeleniumBrowserProject.side) into selenium
+2. Import [SeleniumBrowserProject.side](/Selenium/SeleniumBrowserProject.side) into selenium
 3. Click "Run All Tests" (CTRL+SHIFT+R)
 
 ### Selenium (Webdriver)
-1. Open [Selenium-Webdriver-App](/selenium/Selenium-Webdriver-App) in VS Code.
+1. Open [Selenium-Webdriver-App](/Selenium/Selenium-Webdriver-App) in VS Code.
 2. Run command `npm install`.
 3. Run command `npm start` to run all the tests.
 
