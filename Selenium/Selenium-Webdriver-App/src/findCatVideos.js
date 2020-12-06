@@ -17,7 +17,10 @@ driver.get('https://www.youtube.com/results?search_query=cat+videos&sp=EgIIAg%25
                 var x = [];
                 for(var i = 0; i < 10; i++) {
                     logger.info("[Link] - " + video[i])
+                    x.push(video[i]);
                 }
+                console.table(x);
+                console.log("10 cat videos has been logged in the catlog.log file")
             });
         })
         .catch(err => {console.log('err: ', err);
