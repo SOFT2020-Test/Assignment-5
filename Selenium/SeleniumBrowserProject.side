@@ -1,0 +1,218 @@
+{
+  "id": "8be7635e-55a7-44f5-ba35-4af0ae5b75be",
+  "version": "2.0",
+  "name": "Test-Project",
+  "url": "https://sqengineer.com/practice-sites/basic-web-elements/",
+  "tests": [{
+    "id": "5b3b250a-0acf-42de-879f-db44fbf6d1be",
+    "name": "Search for Youtube video and click it",
+    "commands": [{
+      "id": "f74175d8-132a-46d1-bbd9-e5db4395bec9",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.youtube.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e516d670-b379-48cc-81f0-0a5ba0c896a6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "800x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "216723ab-2811-45e4-bcea-2cd0dc4ea86e",
+      "comment": "",
+      "command": "click",
+      "target": "name=search_query",
+      "targets": [
+        ["name=search_query", "name"],
+        ["css=#search-input > #search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e989ba38-1527-4731-b834-6e29564aadf0",
+      "comment": "",
+      "command": "type",
+      "target": "name=search_query",
+      "targets": [
+        ["name=search_query", "name"],
+        ["css=#search-input > #search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "test video"
+    }, {
+      "id": "10ece563-1952-4c13-8b3b-20f67c1d00ee",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=search_query",
+      "targets": [
+        ["name=search_query", "name"],
+        ["css=#search-input > #search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "adf0e490-ab87-4202-8d5c-d3b16c47366a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ytd-item-section-renderer:nth-child(1) > #dismissable #video-title > .style-scope:nth-child(2)",
+      "targets": [
+        ["css=.ytd-item-section-renderer:nth-child(1) > #dismissable #video-title > .style-scope:nth-child(2)", "css:finder"],
+        ["xpath=//a[@id='video-title']/yt-formatted-string", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/h3/a/yt-formatted-string", "xpath:position"],
+        ["xpath=//yt-formatted-string[contains(.,'HD Video (1080p) with Relaxing Music of Native American Shamans')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ecc4b4d2-b24f-4607-86b4-87d4fd6e7816",
+    "name": "Find form of site and submit data",
+    "commands": [{
+      "id": "a1ba23ac-3e16-42b3-9d2f-6f3e3013d6ea",
+      "comment": "",
+      "command": "open",
+      "target": "https://sqengineer.com/practice-sites/basic-web-elements/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e156417-211b-4dca-a73e-bcb1df53d7b2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "800x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "faa8828a-2f8d-40a4-b1da-9614b9c1f9ce",
+      "comment": "",
+      "command": "type",
+      "target": "id=firstName",
+      "targets": [
+        ["id=firstName", "id"],
+        ["name=fname", "name"],
+        ["css=#firstName", "css:finder"],
+        ["xpath=//input[@id='firstName']", "xpath:attributes"],
+        ["xpath=//article[@id='post-109']/div/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Test"
+    }, {
+      "id": "10e80e09-c282-40e4-9067-272bc0164f3f",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastName",
+      "targets": [
+        ["id=lastName", "id"],
+        ["name=lname", "name"],
+        ["css=#lastName", "css:finder"],
+        ["xpath=//input[@id='lastName']", "xpath:attributes"],
+        ["xpath=//article[@id='post-109']/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Name"
+    }, {
+      "id": "49b2da06-8d06-4d8c-850b-0b68a2707c27",
+      "comment": "",
+      "command": "click",
+      "target": "id=otherGender",
+      "targets": [
+        ["id=otherGender", "id"],
+        ["css=#otherGender", "css:finder"],
+        ["xpath=//input[@id='otherGender']", "xpath:attributes"],
+        ["xpath=//article[@id='post-109']/div/form/input[5]", "xpath:idRelative"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29c6bf95-8559-4b1d-b894-678929eb47e7",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=emailID", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//article[@id='post-109']/div/form/input[6]", "xpath:idRelative"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15d2baeb-9a65-44dd-9f71-776cabde65a8",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=emailID", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//article[@id='post-109']/div/form/input[6]", "xpath:idRelative"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": "testid"
+    }, {
+      "id": "77e83406-1cee-4e9c-8e73-7b614898724b",
+      "comment": "",
+      "command": "click",
+      "target": "id=selectBox",
+      "targets": [
+        ["id=selectBox", "id"],
+        ["css=#selectBox", "css:finder"],
+        ["xpath=//select[@id='selectBox']", "xpath:attributes"],
+        ["xpath=//article[@id='post-109']/div/form/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "30711e2e-4797-4b69-ab02-eef1e6c14741",
+      "comment": "",
+      "command": "select",
+      "target": "id=selectBox",
+      "targets": [],
+      "value": "label=Tokyo"
+    }, {
+      "id": "280a8f77-36aa-404d-a4ce-b07b383dcfc5",
+      "comment": "",
+      "command": "click",
+      "target": "id=selectBox",
+      "targets": [
+        ["id=selectBox", "id"],
+        ["css=#selectBox", "css:finder"],
+        ["xpath=//select[@id='selectBox']", "xpath:attributes"],
+        ["xpath=//article[@id='post-109']/div/form/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db92b014-7c5d-403d-862a-8be630bfdf69",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(27)",
+      "targets": [
+        ["css=input:nth-child(27)", "css:finder"],
+        ["xpath=//input[@value='Submit']", "xpath:attributes"],
+        ["xpath=//article[@id='post-109']/div/form/input[7]", "xpath:idRelative"],
+        ["xpath=//input[7]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "27675e9a-c936-4884-8270-44ebcd4a4946",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5b3b250a-0acf-42de-879f-db44fbf6d1be"]
+  }],
+  "urls": ["https://youtube.com/", "https://sqengineer.com/practice-sites/basic-web-elements/"],
+  "plugins": []
+}
