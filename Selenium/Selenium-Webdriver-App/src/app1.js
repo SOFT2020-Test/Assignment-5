@@ -28,7 +28,7 @@ driver.get('https://sqengineer.com/practice-sites/practice-tables-selenium/')
             console.log("Clicked the last link and were redirected :)")
         }).catch(err => {console.log("err: " + err)})
 
-    await driver.sleep(10000).then(() => {
+    await driver.sleep(50000).then(() => {
         driver.quit();
     })
 });

@@ -17,7 +17,7 @@ driver.get('https://sqengineer.com/practice-sites/practice-tables-selenium/')
     const volley = await driver.findElement(webdriver.By.xpath('//*[@id="table2"]/tbody/tr[5]//td[3]')).getText();
     console.table({tableTennis, badminton, cricket, volley})
     
-    await driver.sleep(10000).then(() => {
+    await driver.sleep(50000).then(() => {
         driver.quit();
     })
 });
