@@ -1,6 +1,6 @@
 # Assignment-3   
 ###   by Jonatan, Jonas & Thomas  
-[Assignment Link](Assignment-3-Description.pdf)  
+[Assignment Link](/Assignment-3-Description.pdf)  
 
 ## Setup
 What you'll need:
