@@ -74,4 +74,4 @@ Finally, clone the project and run it up in your favorite IDE. If setup correct 
 **NOTE:** You may have to run the test twice before everyone passes. It is because docker doesn't finish setting up the database before running some of the tests).
 First Run (SETUP)        |  Second Run (SUCCESS)
 :-------------------------:|:-------------------------:
-![failed](/test-failing-screenshot.png)  |  ![passed](/test-passing-screenshot.png)
+![failed](/BookingSystemCucumber/test-failing-screenshot.png)  |  ![passed](/BookingSystemCucumber/test-passing-screenshot.png)
