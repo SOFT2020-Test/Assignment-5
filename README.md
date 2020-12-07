@@ -27,13 +27,6 @@ What you'll need:
 1. Open the [Cucumber](/Cucumber) project in your IDE or cmd prompt and run `mvn test` in it's root folder.
 
 ### BookingSystem
-## Setup
-What you'll need:
-1. Docker to set up a virtual mysql database.
-2. MySQL Workbench or any mysql client.
-3. Your favorite IDE that can run java, we use IntelliJ.
-
-## How to run the project
 1. Setup docker's virtual mysql server with this command: `docker run -d --rm --name mysql-test-db -e MYSQL_ROOT_PASSWORD=password -p 3307:3306 mysql`.
 2. Connect to the docker database through your client with the username and password we setup earlier: `uname: root`, `pw: password`.
 3. Setup your database by running this script:   
