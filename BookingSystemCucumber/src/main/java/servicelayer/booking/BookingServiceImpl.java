@@ -16,6 +16,7 @@ import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 
@@ -34,14 +35,11 @@ public class BookingServiceImpl implements BookingService{
         try {
             smsService.sendSms(message);
             BookingCreation bc = new BookingCreation(customerId, employeeId, date, start, end);
-            if(bc.validateWithinWorkingHours())
-            {
+
                 return bookingStorage.createBooking(bc);
-            }
         } catch(SQLException throwables) {
             throw new BookingServiceException(throwables.getMessage());
         }
-        return -1;
     }
 
     @Override
@@ -70,4 +68,6 @@ public class BookingServiceImpl implements BookingService{
             throw new BookingServiceException(throwables.getMessage());
         }
     }
+
+
 }

@@ -9,6 +9,14 @@ public class EmployeeCreation {
         return lastname;
     }
 
+    public String getClockIn() {
+        return clockIn;
+    }
+
+    public String getClockOut() {
+        return clockOut;
+    }
+
     public final String firstname, lastname, clockIn, clockOut;
 
     public EmployeeCreation(String firstname, String lastname, String clockIn, String clockOut) {

@@ -14,7 +14,6 @@ import java.sql.SQLException;
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = {"pretty"})
 public class RunCucumberTest {
-    private BookingStorage bookingStorage;
 
     @BeforeAll
     public void Setup() throws SQLException {
@@ -29,7 +28,5 @@ public class RunCucumberTest {
                 .dataSource(url, "root", "password"));
 
         flyway.migrate();
-
-        bookingStorage = new BookingStorageImpl(url+db, "root", "password");
     }
 }

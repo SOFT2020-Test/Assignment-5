@@ -35,7 +35,10 @@ public class EmployeeStorageImpl implements EmployeeStorage {
                     var id = resultSet.getInt("id");
                     var firstname = resultSet.getString("firstname");
                     var lastname = resultSet.getString("lastname");
-                    Employee e= new Employee(id, firstname, lastname);
+                    var clockOut = resultSet.getString("clockOut");
+                    var clockIn = resultSet.getString("clockIn");
+
+                    Employee e= new Employee(id, firstname, lastname, clockIn, clockOut);
                     results.add(e);
 
 
@@ -48,11 +51,13 @@ public class EmployeeStorageImpl implements EmployeeStorage {
 
 
     public int createEmployee(EmployeeCreation employeeToCreate) throws SQLException {
-        var sql = "insert into Employees(firstname, lastname) values (?, ?)";
+        var sql = "insert into Employees(firstname, lastname, clockIn, clockOut) values (?, ?, ?, ?)";
         try (var con = getConnection();
              var stmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             stmt.setString(1, employeeToCreate.getFirstname());
             stmt.setString(2, employeeToCreate.getLastname());
+            stmt.setString(3, employeeToCreate.getClockIn());
+            stmt.setString(4, employeeToCreate.getClockOut());
 
             stmt.executeUpdate();
 
@@ -74,7 +79,9 @@ public class EmployeeStorageImpl implements EmployeeStorage {
                 int id = resultSet.getInt("ID");
                 String firstname = resultSet.getString("firstname");
                 String lastname = resultSet.getString("lastname");
-                Employee e = new Employee(id, firstname, lastname);
+                var clockIn = resultSet.getString("clockIn");
+                var clockOut = resultSet.getString("clockOut");
+                Employee e = new Employee(id, firstname, lastname, clockIn, clockOut);
                 results.add(e);
             }
             return results;
