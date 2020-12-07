@@ -1,8 +1,8 @@
 # Assignment-5
+- Jonatan Bakke https://github.com/JonatanMagnusBakke
 - Jonas Hein - https://github.com/Zenzus
 - Thomas Ebsen - https://github.com/Srax   
-  
-[Assignment Link](assignment-05.pdf)  
+- [Assignment Link](assignment-05.pdf)  
 
 ## Setup
 What you'll need:
