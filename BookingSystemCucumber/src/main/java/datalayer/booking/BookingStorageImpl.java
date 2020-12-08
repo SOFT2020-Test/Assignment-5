@@ -156,7 +156,7 @@ public class BookingStorageImpl implements BookingStorage {
     }
 
     private Collection<Employee> getEmployeeWithId(int employeeId) throws SQLException {
-        var sql = "select ID, firstname, lastname from Employees where id = ?";
+        var sql = "select ID, firstname, lastname,dayEnd,dayStart from Employees where id = ?";
         try (var con = getConnection();
              var stmt = con.prepareStatement(sql)) {
             stmt.setInt(1, employeeId);
@@ -167,9 +167,10 @@ public class BookingStorageImpl implements BookingStorage {
                     var id = resultSet.getInt("id");
                     var firstname = resultSet.getString("firstname");
                     var lastname = resultSet.getString("lastname");
-                    var clockIn = resultSet.getString("clockIn");
-                    var clockOut = resultSet.getString("clockOut");
-                    Employee e= new Employee(id, firstname, lastname, clockIn, clockOut);
+                    var dayEnd = resultSet.getString("dayEnd");
+                    var dayStart = resultSet.getString("dayStart");
+
+                    Employee e= new Employee(id, firstname, lastname, dayEnd, dayStart);
                     results.add(e);
 
 
@@ -197,12 +198,12 @@ public class BookingStorageImpl implements BookingStorage {
                     bookingEndTime.setTime(time2);
                     bookingEndTime.add(Calendar.DATE, 1);
 
-                    java.util.Date refStart = new SimpleDateFormat("HH:mm").parse(e.getClockIn());
+                    java.util.Date refStart = new SimpleDateFormat("HH:mm").parse(e.getdayStart());
                     Calendar workStartTime = Calendar.getInstance();
                     workStartTime.setTime(refStart);
                     workStartTime.add(Calendar.DATE, 1);
 
-                    Date refEnd = new SimpleDateFormat("HH:mm").parse(e.getClockOut());
+                    Date refEnd = new SimpleDateFormat("HH:mm").parse(e.getdayEnd());
                     Calendar workEndTime = Calendar.getInstance();
                     workEndTime.setTime(refEnd);
                     workEndTime.add(Calendar.DATE, 1);

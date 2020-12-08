@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class CreateBookingTest {
     private BookingStorage bookingStorage;
 
-    @BeforeAll
+   @BeforeAll
     public void Setup() throws SQLException {
         var url = "jdbc:mysql://localhost:3307/";
         var db = "BookingSystemTest";
@@ -53,7 +53,7 @@ class CreateBookingTest {
                         x.getCustomerId() == 1 &&
                                 x.getEmployeeId() == 1));
     }
-
+/*
     @Test
     public void mustReturnLatestId() throws SQLException {
         // Arrange
@@ -63,5 +63,5 @@ class CreateBookingTest {
 
         // Assert
         assertEquals(1, id2 - id1);
-    }
+    }*/
 }

@@ -2,14 +2,14 @@ package dto;
 
 public class Employee {
     private final int id;
-    private final String firstname, lastname, clockIn, clockOut;;
+    private final String firstname, lastname, dayStart, dayEnd;;
 
-    public Employee(int id, String firstname, String lastname, String clockIn, String clockOut) {
+    public Employee(int id, String firstname, String lastname, String dayStart, String dayEnd) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
-        this.clockIn = clockIn;
-        this.clockOut = clockOut;
+        this.dayStart = dayStart;
+        this.dayEnd = dayEnd;
     }
 
     public int getId() {
@@ -24,12 +24,12 @@ public class Employee {
         return lastname;
     }
 
-    public String getClockIn() {
-        return clockIn;
+    public String getdayStart() {
+        return dayStart;
     }
 
-    public String getClockOut() {
-        return clockOut;
+    public String getdayEnd() {
+        return dayEnd;
     }
 
     @Override

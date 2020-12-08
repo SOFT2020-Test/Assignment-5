@@ -71,8 +71,7 @@ class SvcCreateEmployeeTest {
         // Arrange
         var firstName = "John";
         var lastName = "Johnson";
-        var bday = faker.date().birthday();
-        int id = svc.createEmployee(firstName, lastName, bday, "08:00", "16:00");
+        int id = svc.createEmployee(firstName, lastName,"16:00", "08:00");
 
         // Act
         var createdEmployee = storage.getEmployeeWithId(id);

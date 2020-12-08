@@ -22,7 +22,7 @@ class CreateCustomerTest {
     private CustomerStorage customerStorage;
     private Faker faker;
 
-    @BeforeAll
+  @BeforeAll
     public void Setup() throws SQLException {
         var url = "jdbc:mysql://localhost:3307/";
         var db = "BookingSystemTest";

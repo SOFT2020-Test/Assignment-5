@@ -43,7 +43,7 @@ public class CreateEmployeeTest {
         var firstName = "a";
         var lastName = "b";
         var birthdate = faker.date().birthday();
-        employeeService.createEmployee(firstName, lastName, birthdate, "08:00", "16:00");
+        employeeService.createEmployee(firstName, lastName, "08:00", "16:00");
 
         // Assert
         // Can be read like: verify that storageMock was called 1 time on the method

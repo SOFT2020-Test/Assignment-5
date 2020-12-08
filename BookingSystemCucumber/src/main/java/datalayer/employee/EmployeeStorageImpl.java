@@ -24,7 +24,7 @@ public class EmployeeStorageImpl implements EmployeeStorage {
 
     @Override
     public Collection<Employee> getEmployeeWithId(int employeeId) throws SQLException {
-        var sql = "select ID, firstname, lastname from Employees where id = ?";
+        var sql = "select ID, firstname, lastname,dayEnd,dayStart from Employees where id = ?";
         try (var con = getConnection();
              var stmt = con.prepareStatement(sql)) {
             stmt.setInt(1, employeeId);
@@ -35,10 +35,10 @@ public class EmployeeStorageImpl implements EmployeeStorage {
                     var id = resultSet.getInt("id");
                     var firstname = resultSet.getString("firstname");
                     var lastname = resultSet.getString("lastname");
-                    var clockOut = resultSet.getString("clockOut");
-                    var clockIn = resultSet.getString("clockIn");
+                    var dayEnd = resultSet.getString("dayEnd");
+                    var dayStart = resultSet.getString("dayStart");
 
-                    Employee e= new Employee(id, firstname, lastname, clockIn, clockOut);
+                    Employee e= new Employee(id, firstname, lastname, dayStart, dayEnd);
                     results.add(e);
 
 
@@ -51,13 +51,14 @@ public class EmployeeStorageImpl implements EmployeeStorage {
 
 
     public int createEmployee(EmployeeCreation employeeToCreate) throws SQLException {
-        var sql = "insert into Employees(firstname, lastname, clockIn, clockOut) values (?, ?, ?, ?)";
+        var sql = "insert into Employees(firstname, lastname, dayEnd, dayStart) values (?, ?, ?, ?)";
         try (var con = getConnection();
              var stmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             stmt.setString(1, employeeToCreate.getFirstname());
             stmt.setString(2, employeeToCreate.getLastname());
-            stmt.setString(3, employeeToCreate.getClockIn());
-            stmt.setString(4, employeeToCreate.getClockOut());
+            stmt.setString(3, employeeToCreate.getDayEnd());
+            stmt.setString(4, employeeToCreate.getDayStart());
+
 
             stmt.executeUpdate();
 
@@ -74,14 +75,15 @@ public class EmployeeStorageImpl implements EmployeeStorage {
         try (var con = getConnection();
              var stmt = con.createStatement()) {
             var results = new ArrayList<Employee>();
-            ResultSet resultSet = stmt.executeQuery("select ID, firstname, lastname from Customers");
+            ResultSet resultSet = stmt.executeQuery("select ID, firstname, lastname,dayEnd,dayStart from Employees");
             while (resultSet.next()) {
                 int id = resultSet.getInt("ID");
                 String firstname = resultSet.getString("firstname");
                 String lastname = resultSet.getString("lastname");
-                var clockIn = resultSet.getString("clockIn");
-                var clockOut = resultSet.getString("clockOut");
-                Employee e = new Employee(id, firstname, lastname, clockIn, clockOut);
+                var dayEnd = resultSet.getString("dayEnd");
+                var dayStart = resultSet.getString("dayStart");
+
+                Employee e = new Employee(id, firstname, lastname, dayEnd, dayStart);
                 results.add(e);
             }
             return results;

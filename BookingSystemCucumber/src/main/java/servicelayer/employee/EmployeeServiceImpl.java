@@ -18,9 +18,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 
     @Override
-    public int createEmployee(String firstName, String lastName, Date birthdate, String clockIn, String clockOut) throws EmployeeServiceException {
+    public int createEmployee(String firstName, String lastName, String dayEnd, String dayStart) throws EmployeeServiceException {
         try {
-            return employeeStorage.createEmployee(new EmployeeCreation(firstName, lastName, clockIn, clockOut));
+            EmployeeCreation em = new EmployeeCreation(firstName, lastName, dayEnd, dayStart);
+            return employeeStorage.createEmployee(em);
         } catch (SQLException throwables) {
             throw new EmployeeServiceException(throwables.getMessage());
         }

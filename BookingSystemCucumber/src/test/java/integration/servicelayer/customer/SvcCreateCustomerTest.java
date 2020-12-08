@@ -42,7 +42,7 @@ class SvcCreateCustomerTest {
 //            .withExposedPorts(PORT)
 //            .withEnv("MYSQL_ROOT_PASSWORD", PASSWORD);
 
-    @BeforeAll
+   @BeforeAll
     public void setup() {
         System.err.println("mysql created: " + mysql.isCreated());
         System.err.println("mysql running: " + mysql.isRunning());
