@@ -68,6 +68,10 @@ create table Employees (
 
 ALTER TABLE `BookingSystem`.`Customers` 
 ADD COLUMN `phonenumber` VARCHAR(45) NULL AFTER `birthdate`;
+ALTER TABLE Employees
+    ADD COLUMN dayEnd VARCHAR(45) NULL AFTER birthdate;
+ALTER TABLE Employees
+    ADD COLUMN dayStart VARCHAR(45) NULL AFTER birthdate;
 ```
 
 Finally, clone the project and run it up in your favorite IDE. If setup correct you should see it running with all the tests passing.  
