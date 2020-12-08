@@ -88,4 +88,4 @@ First Run (SETUP)        |  Second Run (SUCCESS)
 2. The cucumber tests and cumcumber feature file is located at.
 3. Assignment-5\BookingSystemCucumber\src\test\java\cucumbertest
 4. Assignment-5\BookingSystemCucumber\src\test\resources\cucumbertest
-
+(/BookingSystemCucumber/cucumberTest.png) | (/BookingSystemCucumber/cucumberFeature.png)
