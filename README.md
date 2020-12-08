@@ -89,6 +89,6 @@ First Run (SETUP)        |  Second Run (SUCCESS)
 3. Assignment-5\BookingSystemCucumber\src\test\java\cucumbertest
 4. Assignment-5\BookingSystemCucumber\src\test\resources\cucumbertest .
        
-First Run (SETUP)        |  Second Run (SUCCESS)
+Cucumber Tests         |  Cucumber Feature
 :-------------------------:|:-------------------------:
 ![failed](/BookingSystemCucumber/cucumberTest.png)  |  ![passed](/BookingSystemCucumber/cucumberFeature.png)
