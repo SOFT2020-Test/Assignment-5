@@ -87,7 +87,9 @@ First Run (SETUP)        |  Second Run (SUCCESS)
 1. we have Extension the project so that a Employee now have a worktime with is added as 2 values dayStart and dayEnd.
 2. The cucumber tests and cumcumber feature file is located at.
 3. Assignment-5\BookingSystemCucumber\src\test\java\cucumbertest
-4. Assignment-5\BookingSystemCucumber\src\test\resources\cucumbertest
+4. Assignment-5\BookingSystemCucumber\src\test\resources\cucumbertest .
        
+
+First Run (SETUP)        |  Second Run (SUCCESS)
 :-------------------------:|:-------------------------:
-![](/BookingSystemCucumber/cucumberTest.png)  |  ![](/BookingSystemCucumber/cucumberFeature.png)
+![failed](/BookingSystemCucumber/cucumberTest.png)  |  ![passed](/BookingSystemCucumber/cucumberFeature.png)
