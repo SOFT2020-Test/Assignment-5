@@ -80,3 +80,11 @@ Finally, clone the project and run it up in your favorite IDE. If setup correct 
 First Run (SETUP)        |  Second Run (SUCCESS)
 :-------------------------:|:-------------------------:
 ![failed](/BookingSystemCucumber/test-failing-screenshot.png)  |  ![passed](/BookingSystemCucumber/test-passing-screenshot.png)
+
+
+
+##Assignment-5 Cucumber Extension of booking system
+we have Extension the project so that a Employee now have a worktime with is added as 2 values dayStart and dayEnd.
+The cucumber tests are located Assignment-5\BookingSystemCucumber\src\test\java\cucumbertest and the cumcumber feature file is located 
+Assignment-5\BookingSystemCucumber\src\test\resources\cucumbertest
+
